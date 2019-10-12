@@ -4,5 +4,5 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsof
 RUN dpkg -i packages-microsoft-prod.deb
 RUN apt-get update && apt-get install apt-transport-https dotnet-sdk-2.2 nodejs zip -y
 RUN curl -fsSL https://get.pulumi.com | bash -
-RUN pulumi version
+RUN /usr/local/bin/pulumi version
 ENV PATH=$PATH:$HOME/.pulumi/bin
