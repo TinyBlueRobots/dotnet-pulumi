@@ -5,4 +5,4 @@ RUN dpkg -i packages-microsoft-prod.deb
 RUN apt-get update && apt-get install apt-transport-https dotnet-sdk-2.2 nodejs zip -y
 RUN curl -fsSL https://get.pulumi.com | bash -
 ENV PATH=$PATH:$HOME/.pulumi/bin
-RUN pulumi version
+RUN $HOME/.pulumi/bin/pulumi version
